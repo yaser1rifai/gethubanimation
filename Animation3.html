@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>animation3</title>
+  <style>
+  body{
+  background:#8888;
+  padding-top:5em;
+  display:flex;
+  justify-content:center;
+}
+
+.printer h1{
+  color:#fff;
+  font-family:helvetica;
+  overflow:hidden;
+  border-right:.15em solid orangered;
+  white-space:nowrap;
+  margin:0 auto;
+  letter-spacing:.25em;
+  animation :
+           printing 3.5s steps(40,end),
+           blink .5s step-end infinite;
+}
+
+@keyframes printing{
+  from {width:0}
+  to {width:100%}
+}
+@keyframes blink{
+  from,to {border-color:transparent}
+  50% {border-color:red}
+}
+  </style>
+</head>
+<body>
+  <div class="printer">
+    <h1> Introduction to animation</h1>
+  </div>
+</body>
+</html>
